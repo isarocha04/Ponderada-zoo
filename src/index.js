@@ -90,8 +90,9 @@ app.get('/mostrar-recintos', (req, res) => {
   res.send(recintos);
 });
 
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
+const server = app.listen(port, () => {
+  console.log(`App listening on port ${server.address().port}`);
 });
+
 
 module.exports = app;
